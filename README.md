@@ -7,8 +7,18 @@
 
 ## 준비
 
-Backend: Spring boot
--  0~500ms 사이의 랜덤 sleep 이후 응답
+### Backend: Spring boot
+- 0~500ms 사이의 랜덤 sleep 이후 응답 하도록 로직 구현
+
+### 프로젝트 빌드
+```text
+./gradlew clean build
+```
+
+### Docker build
+```text
+docker build -t traffic-app .
+```
 
 
 ## 방법
