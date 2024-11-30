@@ -6,7 +6,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -17,6 +16,12 @@ public class TrafficController {
     @Autowired
     public TrafficController(TrafficService trafficService) {
         this.trafficService = trafficService;
+    }
+
+    @GetMapping("/")
+    public ResponseEntity<MyResult> index(HttpServletRequest request) {
+        return ResponseEntity
+                .ok(new MyResult(0, "ok"));
     }
 
     @GetMapping("/traffic")
