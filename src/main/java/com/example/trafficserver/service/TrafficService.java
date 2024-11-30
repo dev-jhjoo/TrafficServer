@@ -29,6 +29,6 @@ public class TrafficService {
     }
 
     public HttpStatus getHttpStatus(MyResult result) {
-        return result.getResultCode() == 200 ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR;
+        return result.getResultCode() == 0 ? HttpStatus.OK : HttpStatus.INTERNAL_SERVER_ERROR;
     }
 }
